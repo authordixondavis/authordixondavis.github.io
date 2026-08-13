@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dixon Davis | Author of 8:01 – Collisions of Time</title>
+
+  <meta name="description"
+        content="Official website of Dixon Davis, author of 8:01: Collisions of Time. Walk with Jackson Corvin through a story of love, loss, resilience, memory and hope.">
+
+  <meta name="author" content="Dixon Davis">
+
+  <style>
+    :root {
+      --black: #080706;
+      --deep: #100d0a;
+      --cream: #f2eadb;
+      --soft: #b9ad9a;
+      --gold: #c99545;
+      --gold-light: #e1ba72;
+      --line: rgba(225,186,114,.28);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: linear-gradient(
+        to bottom,
+        rgba(5,4,3,.94),
+        rgba(5,4,3,.62),
+        transparent
+      );
+    }
+
+    .nav-inner {
+      width: min(1180px, 92%);
+      margin: auto;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .92rem;
+      letter-spacing: .28em;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: #d6cbb9;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,3,2,.98) 0%,
+          rgba(4,3,2,.83) 31%,
+          rgba(4,3,2,.28) 59%,
+          rgba(4,3,2,.05) 100%
+        ),
+        url("801-hero.png") center right / cover no-repeat;
+    }
+
+    .hero-content {
+      width: min(1180px, 90%);
+      margin: auto;
+      padding-top: 70px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.1rem, 8vw, 7rem);
+      font-weight: 400;
+      letter-spacing: .02em;
+      line-height: .95;
+      max-width: 650px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      margin-top: 25px;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-style: italic;
+      color: #ded2bf;
+      max-width: 480px;
+    }
+
+    .hero-buttons {
+      margin-top: 38px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .74rem;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      transition: .25s ease;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #090704;
+    }
+
+    .button:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      color: #090704;
+    }
+
+    .scroll-note {
+      position: absolute;
+      left: 5%;
+      bottom: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: .63rem;
+      letter-spacing: .25em;
+      color: #918675;
+    }
+
+    /* SHARED */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .container {
+      width: min(1100px, 88%);
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .68rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-weight: 400;
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 30px;
+    }
+
+    /* BOOK */
+
+    .book-section {
+      background:
+        radial-gradient(circle at 80% 30%, #251a0e 0, transparent 34%),
+        #0c0a08;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .cover-wrap {
+      max-width: 420px;
+      margin: auto;
+      position: relative;
+    }
+
+    .cover-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 8% -5% -5% 8%;
+      background: rgba(195,143,65,.18);
+      filter: blur(35px);
+      z-index: 0;
+    }
+
+    .cover-wrap img {
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 28px 70px rgba(0,0,0,.65);
+    }
+
+    .book-copy p {
+      color: #c9bead;
+      font-size: 1.08rem;
+      max-width: 620px;
+      margin-bottom: 22px;
+    }
+
+    .book-copy .lead {
+      color: var(--cream);
+      font-size: 1.32rem;
+    }
+
+    /* JACKSON */
+
+    .jackson {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(6,5,4,.84), rgba(6,5,4,.95)),
+        url("801-hero.png") center / cover fixed;
+    }
+
+    .jackson-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .jackson-question {
+      font-size: clamp(2.9rem, 7vw, 6.2rem);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    .jackson p {
+      max-width: 670px;
+      margin: auto;
+      color: #cabfaf;
+      font-size: 1.12rem;
+    }
+
+    .time-mark {
+      color: var(--gold-light);
+      font-size: clamp(4rem, 11vw, 8rem);
+      line-height: 1;
+      margin-top: 48px;
+      letter-spacing: .05em;
+    }
+
+    /* QUOTE */
+
+    .quote-section {
+      background: #ebe3d5;
+      color: #17120d;
+      text-align: center;
+    }
+
+    .quote {
+      max-width: 840px;
+      margin: auto;
+      font-size: clamp(1.55rem, 3.7vw, 2.7rem);
+      line-height: 1.45;
+      font-style: italic;
+    }
+
+    .quote-credit {
+      margin-top: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #625746;
+    }
+
+    /* AUTHOR */
+
+    .author {
+      background: #090807;
+    }
+
+    .author-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .author p {
+      color: #c8beaf;
+      font-size: 1.08rem;
+      margin-bottom: 20px;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, #26190c 0%, #0b0907 58%);
+    }
+
+    .cta h2 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      font-weight: 400;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .cta p {
+      color: #bcb09f;
+      margin: 0 auto 34px;
+      max-width: 560px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 45px 5%;
+      text-align: center;
+      color: #7e7568;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .7rem;
+      letter-spacing: .08em;
+    }
+
+    .footer-brand {
+      color: #c7bdaE;
+      letter-spacing: .26em;
+      margin-bottom: 10px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 100svh;
+        align-items: flex-end;
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(4,3,2,.08) 25%,
+            rgba(4,3,2,.50) 53%,
+            rgba(4,3,2,.98) 82%
+          ),
+          url("801-hero.png") 62% center / cover no-repeat;
+      }
+
+      .hero-content {
+        padding-bottom: 90px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+      }
+
+      .hero-sub {
+        font-size: 1.08rem;
+      }
+
+      .book-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .book-copy {
+        text-align: left;
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .jackson {
+        background:
+          linear-gradient(rgba(6,5,4,.84), rgba(6,5,4,.96)),
+          url("801-hero.png") center / cover no-repeat;
+      }
+
+      .scroll-note {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#top">DIXON DAVIS</a>
+
+      <div class="nav-links">
+        <a href="#book">8:01</a>
+        <a href="#jackson">Jackson Corvin</a>
+        <a href="#author">Author</a>
+        <a href="#buy">Read</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="hero" id="top">
+    <div class="hero-content">
+
+      <div class="eyebrow">A novel by Dixon Davis</div>
+
+      <h1>
+        Some stories
+        <span>change everything.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Walk with Jackson Corvin through a life measured
+        in moments of love, loss, sacrifice and hope.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#book" class="button button-primary">Discover 8:01</a>
+        <a href="#jackson" class="button">Meet Jackson</a>
+      </div>
+
+    </div>
+
+    <div class="scroll-note">Continue the journey ↓</div>
+  </header>
+
+
+  <section class="book-section" id="book">
+    <div class="container book-grid">
+
+      <div class="cover-wrap">
+        <img
+          src="801-Cover.jpg"
+          alt="8:01 Collisions of Time by Dixon Davis book cover">
+      </div>
+
+      <div class="book-copy">
+
+        <div class="section-label">The debut novel</div>
+
+        <h2 class="section-title">
+          8:01<br>
+          Collisions of Time
+        </h2>
+
+        <p class="lead">
+          What if the worst thing that ever happened to you
+          was living?
+        </p>
+
+        <p>
+          Jackson Corvin's life is shaped by moments that refuse
+          to remain in the past. Love, family, devastating loss,
+          sacrifice and survival collide across a lifetime in a
+          deeply human story about what remains when everything
+          familiar has been taken away.
+        </p>
+
+        <p>
+          At its heart, 8:01 is not a story about surrender.
+          It is about the stubborn persistence of hope.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#buy" class="button button-primary">Find the book</a>
+          <a href="#jackson" class="button">Walk with Jackson</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="jackson" id="jackson">
+    <div class="container jackson-inner">
+
+      <div class="section-label">One life. Countless collisions.</div>
+
+      <h2 class="jackson-question">
+        Who is<br>
+        Jackson Corvin?
+      </h2>
+
+      <p>
+        To understand Jackson, you have to walk beside him.
+        Through the moments that shaped him.
+        Through the people he loved.
+        Through everything he lost.
+        And through the quiet decision to keep moving forward.
+      </p>
+
+      <div class="time-mark">8:01</div>
+
+    </div>
+  </section>
+
+
+  <section class="quote-section">
+    <div class="container">
+
+      <div class="quote">
+        The past is the past.<br>
+        Tomorrow is tomorrow.<br>
+        Today, however, is today.<br><br>
+
+        Let us find happiness in today.<br>
+        Let us keep hope for tomorrow.<br>
+        And let us leave bitterness where it belongs…<br>
+        In the past.
+      </div>
+
+      <div class="quote-credit">
+        Jackson Corvin · 8:01: Collisions of Time
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="author" id="author">
+    <div class="container author-inner">
+
+      <div class="section-label">The author</div>
+
+      <h2 class="section-title">Dixon Davis</h2>
+
+      <p>
+        Dixon Davis writes character-driven fiction centered on
+        memory, human connection, resilience and the moments that
+        quietly alter the direction of a life.
+      </p>
+
+      <p>
+        8:01: Collisions of Time is his debut novel and the
+        beginning of a larger body of work built around stories
+        that refuse simple answers and characters who continue
+        forward when surrender would be easier.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section class="cta" id="buy">
+    <div class="container">
+
+      <div class="section-label">Begin the journey</div>
+
+      <h2>Come.<br>Walk with Jackson.</h2>
+
+      <p>
+        8:01: Collisions of Time is available through Amazon.
+      </p>
+
+      <!-- Replace this search link later with the direct Amazon book URL -->
+      <a
+        class="button button-primary"
+        href="https://www.amazon.com/s?k=8%3A01+Collisions+of+Time+Dixon+Davis"
+        target="_blank"
+        rel="noopener noreferrer">
+        Find 8:01 on Amazon
+      </a>
+
+    </div>
+  </section>
+
+
+  <footer>
+
+    <div class="footer-brand">DIXON DAVIS</div>
+
+    <div>
+      © 2026 Dixon Davis. All rights reserved.<br>
+      8:01: Collisions of Time
+    </div>
+
+  </footer>
+
+</body>
+</html>
