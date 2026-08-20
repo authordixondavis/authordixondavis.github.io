@@ -14,10 +14,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>August 23 | A Day for Mary Ann | Dixon Davis</title>
+  <title>August 23 | A Day for Mom | Dixon Davis</title>
 
   <meta name="description"
-        content="On August 23, in honor of Mary Ann's birthday, 8:01 – Collisions of Time by Dixon Davis is free on Kindle for one day.">
+        content="On August 23, in honor of Mom's birthday, 8:01 – Collisions of Time by Dixon Davis is free on Kindle for one day.">
 
   <meta name="author" content="Dixon Davis">
 
@@ -333,7 +333,7 @@
     <div class="hero-content">
       <div class="eyebrow">One Day • One Story • In Her Memory</div>
 
-      <h1>A Day for<br>Mary Ann</h1>
+      <h1>A Day for<br>Mom</h1>
 
       <div class="date">August 23</div>
 
@@ -354,7 +354,7 @@
       <h2>Some people never really leave us.</h2>
 
       <p>
-        My mother, Mary Ann, believed in me when believing wasn't easy.
+        My mother, believed in me when believing wasn't easy.
         She was part of my life, my memories, and ultimately part of
         the heart behind the story I wrote.
       </p>
@@ -365,11 +365,11 @@
 
       <p>
         So for one day, I don't want <strong>8:01 – Collisions of Time</strong>
-        to simply be a book for sale.
+        to simply be a book for sale, I want it to be an experience.
       </p>
 
       <p>
-        I want it to be something given away.
+        I want to share it free and hope it can make difference in someone else's life.
       </p>
 
     </div>
@@ -396,7 +396,7 @@
 
       <p>
         At its heart, 8:01 is not a story about surrender.
-        It is about the stubborn persistence of hope.
+        It is about the stubborn persistence of hope and the indomitable perseverance of soul.
       </p>
 
     </div>
@@ -510,14 +510,14 @@
     bookReveal.classList.add('visible');
 
     trackEvent('aug23_book_link_revealed', {
-      campaign: 'aug23_mary_ann'
+      campaign: 'aug23_mom'
     });
   }
 
   shareButton.addEventListener('click', async () => {
 
     trackEvent('aug23_share_clicked', {
-      campaign: 'aug23_mary_ann'
+      campaign: 'aug23_mom'
     });
 
     const shareData = {
@@ -532,7 +532,7 @@
         await navigator.share(shareData);
 
         trackEvent('aug23_native_share_completed', {
-          campaign: 'aug23_mary_ann'
+          campaign: 'aug23_mom'
         });
 
         revealBookLink();
@@ -558,7 +558,7 @@
         await navigator.clipboard.writeText(window.location.href);
 
         trackEvent('aug23_link_copied', {
-          campaign: 'aug23_mary_ann'
+          campaign: 'aug23_mom'
         });
 
         alert(
@@ -579,7 +579,7 @@
   amazonButton.addEventListener('click', function() {
 
     trackEvent('aug23_amazon_click', {
-      campaign: 'aug23_mary_ann',
+      campaign: 'aug23_mom',
       destination: 'amazon_kindle'
     });
 
@@ -591,7 +591,7 @@
   */
 
   trackEvent('aug23_event_page_view', {
-    campaign: 'aug23_mary_ann'
+    campaign: 'aug23_mom'
   });
 
 </script>
