@@ -446,23 +446,15 @@ e
             Your celebration gift Kindle link is ready.
           </p>
 
-          <!--
-            IMPORTANT:
-            Replace AMAZON_LINK_HERE below with the exact
-            Amazon Kindle URL before August 23.
-          -->
-
           <a
             id="amazonButton"
             class="amazon-button"
-            href="AMAZON_LINK_HERE"
+            href="https://a.co/d/0503BZYc"
             target="_blank"
             rel="noopener">
             Get 8:01 Free on Kindle
           </a>
           
-<section class="quote-section">
-    <div class="quote-card">
 
 
   <footer>
@@ -494,7 +486,33 @@ e
   }
 
   shareButton.addEventListener('click', async () => {
+const now = new Date();
 
+const aug23 = new Date(2026, 7, 23);
+const aug28 = new Date(2026, 7, 28);
+
+now.setHours(0, 0, 0, 0);
+aug23.setHours(0, 0, 0, 0);
+aug28.setHours(0, 0, 0, 0);
+
+const daysUntil = Math.round(
+    (aug23 - now) / (1000 * 60 * 60 * 24)
+);
+
+if (daysUntil > 1) {
+    alert(daysUntil + ' days until the celebration.');
+    return;
+}
+
+if (daysUntil === 1) {
+    alert('1 day until the celebration.');
+    return;
+}
+
+if (now >= aug28) {
+    alert('The five-day celebration has ended. Thank you for being part of it.');
+    return;
+                               }
     trackEvent('aug23_share_clicked', {
       campaign: 'aug23_mom'
     });
