@@ -14,40 +14,11 @@
 <header class="hero"><div class="inner"><div class="eyebrow">Start a Conversation</div><h1>Publishing & Cover Design Inquiries</h1><p>Tell us a little about your project. We review each inquiry individually and respond with the appropriate application, service information, and current pricing guide.</p></div></header>
 <main class="main"><div class="wrap">
 <div class="switch"><button id="pubTab" type="button" onclick="showPanel('publishing')">Publishing Inquiry</button><button id="coverTab" type="button" onclick="showPanel('cover')">Cover Design Inquiry</button></div>
-<section id="publishing" class="panel">
-<div class="eyebrow">For Authors</div><h2>Tell us about your manuscript.</h2><p class="note">This is an initial inquiry only. Please do not send a full manuscript at this stage. If the project appears to be a potential fit, we will contact you directly with the next steps.</p>
-<form class="form" onsubmit="sendPublishing(event)">
-<div class="field"><label for="pname">Author or Pen Name</label><input id="pname" required></div>
-<div class="field"><label for="pemail">Email Address</label><input id="pemail" type="email" required></div>
-<div class="field"><label for="ptitle">Book Title</label><input id="ptitle" required></div>
-<div class="field"><label for="pgenre">Genre</label><input id="pgenre" required></div>
-<div class="field"><label for="pwords">Approximate Word Count</label><input id="pwords" inputmode="numeric"></div>
-<div class="field"><label for="pstatus">Manuscript Status</label><select id="pstatus"><option>Complete</option><option>Editing / Revision</option><option>In Progress</option></select></div>
-<div class="field"><label for="ppub">Publication History</label><select id="ppub"><option>Unpublished</option><option>Previously self-published</option><option>Previously traditionally published</option><option>Other</option></select></div>
-<div class="field"><label for="plink">Website or Social Link (Optional)</label><input id="plink"></div>
-<div class="field full"><label for="psynopsis">Short Synopsis</label><textarea id="psynopsis" maxlength="1200" required></textarea></div>
-<div class="field full"><label for="phelp">What are you looking for from a publishing relationship?</label><textarea id="phelp" maxlength="900"></textarea></div>
-<div class="full check"><input id="pack" type="checkbox" required><span>I understand that an inquiry does not create a publishing, representation, or agency relationship and does not guarantee acceptance.</span></div>
-<div class="full"><button class="btn" type="submit">Request Submission Information</button></div>
-</form></section>
-<section id="cover" class="panel">
-<div class="eyebrow">Book Cover Design</div><h2>Tell us what you are creating.</h2><p class="note">Cover projects are scoped individually. After reviewing your inquiry, we will contact you with the appropriate design information and a project-specific price guide or quote.</p>
-<form class="form" onsubmit="sendCover(event)">
-<div class="field"><label for="cname">Your Name</label><input id="cname" required></div>
-<div class="field"><label for="cemail">Email Address</label><input id="cemail" type="email" required></div>
-<div class="field"><label for="ctitle">Book Title</label><input id="ctitle" required></div>
-<div class="field"><label for="cauthor">Author Name on Cover</label><input id="cauthor" required></div>
-<div class="field"><label for="cgenre">Genre</label><input id="cgenre" required></div>
-<div class="field"><label for="cformat">Format Needed</label><select id="cformat"><option>eBook</option><option>Print</option><option>eBook & Print</option><option>Not Sure Yet</option></select></div>
-<div class="field"><label for="ctype">Cover Type</label><select id="ctype"><option>Front Cover Only</option><option>Full Wrap</option><option>Not Sure Yet</option></select></div>
-<div class="field"><label for="cdate">Approximate Publication Date</label><input id="cdate"></div>
-<div class="field full"><label for="cmood">Style, Mood, or Visual Direction</label><textarea id="cmood" maxlength="1000" required></textarea></div>
-<div class="field full"><label for="cart">Do you already have artwork, reference images, comparable covers, or other materials?</label><textarea id="cart" maxlength="700"></textarea></div>
-<div class="field full"><label for="cnotes">Additional Notes</label><textarea id="cnotes" maxlength="700"></textarea></div>
-<div class="full"><button class="btn" type="submit">Request Cover Design Information</button></div>
-</form></section>
-<p class="smallprint">Submitting either inquiry opens your email application with your answers formatted into a message to Southern Tranquility Publishing House. You will be able to review the message before sending it.</p>
-</div></main>
+<section id="publishing" class="panel"><div class="eyebrow">For Authors</div><h2>Tell us about your manuscript.</h2><p class="note">This is an initial inquiry only. Please do not send a full manuscript at this stage. If the project appears to be a potential fit, we will contact you directly with the next steps.</p>
+<form class="form" onsubmit="sendPublishing(event)"><div class="field"><label for="pname">Author or Pen Name</label><input id="pname" required></div><div class="field"><label for="pemail">Email Address</label><input id="pemail" type="email" required></div><div class="field"><label for="ptitle">Book Title</label><input id="ptitle" required></div><div class="field"><label for="pgenre">Genre</label><input id="pgenre" required></div><div class="field"><label for="pwords">Approximate Word Count</label><input id="pwords" inputmode="numeric"></div><div class="field"><label for="pstatus">Manuscript Status</label><select id="pstatus"><option>Complete</option><option>Editing / Revision</option><option>In Progress</option></select></div><div class="field"><label for="ppub">Publication History</label><select id="ppub"><option>Unpublished</option><option>Previously self-published</option><option>Previously traditionally published</option><option>Other</option></select></div><div class="field"><label for="plink">Website or Social Link (Optional)</label><input id="plink"></div><div class="field full"><label for="psynopsis">Short Synopsis</label><textarea id="psynopsis" maxlength="1200" required></textarea></div><div class="field full"><label for="phelp">What are you looking for from a publishing relationship?</label><textarea id="phelp" maxlength="900"></textarea></div><div class="full check"><input id="pack" type="checkbox" required><span>I understand that an inquiry does not create a publishing, representation, or agency relationship and does not guarantee acceptance.</span></div><div class="full"><button class="btn" type="submit">Request Submission Information</button></div></form></section>
+<section id="cover" class="panel"><div class="eyebrow">Book Cover Design</div><h2>Tell us what you are creating.</h2><p class="note">Cover projects are scoped individually. After reviewing your inquiry, we will contact you with the appropriate design information and a project-specific price guide or quote.</p>
+<form class="form" onsubmit="sendCover(event)"><div class="field"><label for="cname">Your Name</label><input id="cname" required></div><div class="field"><label for="cemail">Email Address</label><input id="cemail" type="email" required></div><div class="field"><label for="ctitle">Book Title</label><input id="ctitle" required></div><div class="field"><label for="cauthor">Author Name on Cover</label><input id="cauthor" required></div><div class="field"><label for="cgenre">Genre</label><input id="cgenre" required></div><div class="field"><label for="cformat">Format Needed</label><select id="cformat"><option>eBook</option><option>Print</option><option>eBook & Print</option><option>Not Sure Yet</option></select></div><div class="field"><label for="ctype">Cover Type</label><select id="ctype"><option>Front Cover Only</option><option>Full Wrap</option><option>Not Sure Yet</option></select></div><div class="field"><label for="cdate">Approximate Publication Date</label><input id="cdate"></div><div class="field full"><label for="cmood">Style, Mood, or Visual Direction</label><textarea id="cmood" maxlength="1000" required></textarea></div><div class="field full"><label for="cart">Do you already have artwork, reference images, comparable covers, or other materials?</label><textarea id="cart" maxlength="700"></textarea></div><div class="field full"><label for="cnotes">Additional Notes</label><textarea id="cnotes" maxlength="700"></textarea></div><div class="full"><button class="btn" type="submit">Request Cover Design Information</button></div></form></section>
+<p class="smallprint">Submitting either inquiry opens your email application with your answers formatted into a message to Southern Tranquility Publishing House. You will be able to review the message before sending it.</p></div></main>
 <footer>SOUTHERN TRANQUILITY PUBLISHING HOUSE · INQUIRIES</footer>
 <script>
 const email='southerntranquilitypublishing@gmail.com';
@@ -57,4 +28,5 @@ function sendPublishing(e){e.preventDefault();const b=`PUBLISHING INQUIRY\n\nAut
 function sendCover(e){e.preventDefault();const b=`BOOK COVER DESIGN INQUIRY\n\nName: ${cname.value}\nEmail: ${cemail.value}\nBook Title: ${ctitle.value}\nAuthor Name on Cover: ${cauthor.value}\nGenre: ${cgenre.value}\nFormat: ${cformat.value}\nCover Type: ${ctype.value}\nApprox. Publication Date: ${cdate.value}\n\nSTYLE / MOOD / VISUAL DIRECTION\n${cmood.value}\n\nEXISTING ART / REFERENCES / COMPARABLES\n${cart.value}\n\nADDITIONAL NOTES\n${cnotes.value}`;location.href=`mailto:${email}?subject=${enc('Cover Design Inquiry — '+ctitle.value)}&body=${enc(b)}`}
 const q=new URLSearchParams(location.search).get('type');showPanel(q==='cover'?'cover':'publishing');
 </script>
+<script src="music.js"></script>
 </body></html>
