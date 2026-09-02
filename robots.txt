@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://authordixondavis.github.io/sitemap.xml
