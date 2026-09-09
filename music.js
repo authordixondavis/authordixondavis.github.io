@@ -29,6 +29,38 @@
     bio.appendChild(socials);
   }
 
+  // Reader-list welcome automation. FormSubmit autoresponse requires its
+  // standard POST flow and reCAPTCHA to remain enabled.
+  const readerForm=document.querySelector('form.joinform');
+  if(readerForm&&readerForm.action.includes('formsubmit.co')){
+    const captchaOverride=readerForm.querySelector('input[name="_captcha"]');
+    if(captchaOverride) captchaOverride.remove();
+
+    let autoresponse=readerForm.querySelector('input[name="_autoresponse"]');
+    if(!autoresponse){
+      autoresponse=document.createElement('input');
+      autoresponse.type='hidden';
+      autoresponse.name='_autoresponse';
+      readerForm.appendChild(autoresponse);
+    }
+    autoresponse.value=`Welcome to Southern Tranquility.
+
+We believe good stories deserve the chance to be discovered—and that readers should have a place where finding something new feels personal again.
+
+Southern Tranquility Publishing House is being built around a simple idea: connecting authors to readers, and readers to the stories that move us.
+
+We're still at the beginning of that journey. As we grow, you'll get an early look at new books, authors, upcoming releases, behind-the-scenes developments, and occasional opportunities to experience stories before the rest of the world does.
+
+But we don't want this to become another inbox full of advertising.
+
+Our goal is to build a reader community worth belonging to.
+
+Thanks for being here at the beginning.
+
+Southern Tranquility Publishing House
+Stories are better when they're shared.`;
+  }
+
   const audio=document.createElement('audio');
   audio.src=AUDIO_FILE;
   audio.loop=true;
